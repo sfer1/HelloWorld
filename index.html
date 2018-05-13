@@ -15,14 +15,15 @@
         }
       });
     </script>
-  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
     <a-scene>
+      <a-sky src=="https://c3.staticflickr.com/2/1475/26239222850_cabde81c39_k.jpg"></a-sky>
       <a-assets>
         <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
       </a-assets>    
       
       <a-camera position="0 2 4">
-        <a-cursor color="#4CC3D9" fuse="true" timeout="8"></a-cursor>
+        <a-cursor color="#4CC3D9" fuse="true" timeout="6"></a-cursor>
       </a-camera>
       
       <a-box src="#boxTexture" position="-3 4 -5" rotation="0 45 45" scale="1 1 1" set-sky="longLat_8.jpg">
@@ -50,7 +51,7 @@
       <a-sphere color="#F44336" radius="0.5" position="-3 4 0" set-sky="puydesancy.jpg"></a-sphere>
       <a-sphere color="#FFEB3B" radius="0.5" position="3 4 0" set-sky="puydesancy.jpg"></a-sphere>
       -->
-      <a-sky src=="https://c3.staticflickr.com/2/1475/26239222850_cabde81c39_k.jpg"></a-sky>
+      
       <a-text font="kelsonsans" value="Focus on the cubes to see the images" width="6" position="-2 0.25 -1.5" rotation="0 15 0"></a-text>
     </a-scene>
   </body>
