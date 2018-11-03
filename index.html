@@ -15,12 +15,48 @@
         }
       });
     </script>
+    
+    
+<script>
+  AFRAME.registerComponent('change-color-on-hover', {
+    schema: {
+      color: {default: 'red'}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;  // <a-box>
+      var defaultColor = el.getAttribute('material').color;
+
+      el.addEventListener('mouseenter', function () {
+        el.setAttribute('color', data.color);
+      });
+
+      el.addEventListener('mouseleave', function () {
+        el.setAttribute('color', defaultColor);
+      });
+    }
+  });
+</script>
+    
+    
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
     <a-scene>
       <a-sky src=="https://c3.staticflickr.com/2/1475/26239222850_cabde81c39_k.jpg"></a-sky>
       <a-assets>
         <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
       </a-assets>    
+      
+      <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box>
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       <a-camera position="0 2 4">
         <a-cursor color="#4CC3D9" fuse="true" timeout="6"></a-cursor>
